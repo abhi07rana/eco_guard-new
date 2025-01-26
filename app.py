@@ -200,8 +200,8 @@ def upload_file():
         data = pd.read_csv(io.StringIO(file.read().decode('utf-8')))
 
         # Ensure necessary columns are present
-        if 'Health Incidents' not in data.columns:
-            return jsonify({"error": "'Health Incidents' column is missing in the CSV."}), 400
+        # if 'Health Incidents' not in data.columns:
+        #     return jsonify({"error": "'Health Incidents' column is missing in the CSV."}), 400
 
         # Reorder columns to match the training data format
         expected_columns = ['Health Incidents', 'AQI', 'O3', 'SO2', 'PM2.5', 'PM10', 'NO2', 'Temperature', 'Humidity']

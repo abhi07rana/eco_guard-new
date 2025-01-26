@@ -80,6 +80,6 @@ def home():
     return "EcoGuard Model API is running!"
 
 # Run the Flask app (only for local testing, Render will handle the deployment)
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Use environment variable for the port
-    app.run(debug=True, host='0.0.0.0', port=port)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=10000)
+

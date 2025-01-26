@@ -42,8 +42,8 @@ def upload_file():
         expected_columns = ['Health Incidents', 'AQI', 'O3', 'SO2', 'PM2.5', 'PM10', 'NO2', 'Temperature', 'Humidity']
         missing_columns = set(expected_columns) - set(data.columns)
         
-        if missing_columns:
-            return jsonify({"error": f"Missing columns: {', '.join(missing_columns)}"}), 400
+        # if missing_columns:
+        #     return jsonify({"error": f"Missing columns: {', '.join(missing_columns)}"}), 400
         
         # Reorder the DataFrame columns to match the expected order
         data = data[expected_columns]
